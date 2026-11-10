@@ -4229,3 +4229,95 @@ body.modal-open {
         font-size: 0.67rem;
     }
 }
+/* =========================================
+   CORREÇÕES MOBILE — PORTFÓLIO
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* NÚMERO 01 - 09 DO INÍCIO */
+    .hero-number {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        display: block;
+        width: 100%;
+        margin-top: 28px;
+        text-align: left;
+        z-index: 2;
+    }
+
+    /* SEÇÃO MINHA TRAJETÓRIA */
+    .trajectory-section {
+        width: 100%;
+        padding: 70px 6%;
+        overflow: hidden;
+    }
+
+    .trajectory-section .section-heading {
+        width: 100%;
+        text-align: left;
+    }
+
+    .trajectory-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        gap: 18px;
+        padding: 24px 18px;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    .trajectory-big-number {
+        font-size: clamp(60px, 18vw, 85px);
+        line-height: 1;
+    }
+
+    .trajectory-intro h3 {
+        font-size: 23px;
+        overflow-wrap: break-word;
+    }
+
+    .trajectory-intro p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    /* LINHA DO TEMPO */
+    .timeline {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding-left: 42px;
+        box-sizing: border-box;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .timeline-marker {
+        left: -52px;
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 21px;
+        overflow-wrap: break-word;
+    }
+
+    .timeline-content p {
+        font-size: 12px;
+        line-height: 1.8;
+        overflow-wrap: break-word;
+    }
+}
