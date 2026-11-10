@@ -3114,642 +3114,7 @@ a:focus-visible,
     }
 
 }
-/* =========================================
-   RESPONSIVIDADE — CELULARES E TABLETS
-========================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-}
-
-body {
-    margin: 0;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* TABLETS */
-
-@media (max-width: 1024px) {
-    .header-container {
-        padding: 0 5%;
-    }
-
-    .section {
-        padding: 90px 6%;
-    }
-
-    .hero-content {
-        padding: 0 7%;
-    }
-
-    .about-grid {
-        gap: 35px;
-    }
-
-    .reflection-grid,
-    .goals-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .planning-steps {
-        gap: 20px;
-    }
-}
-
-/* CELULARES */
-
-@media (max-width: 768px) {
-
-    /* GERAL */
-
-    html {
-        scroll-padding-top: 70px;
-    }
-
-    body {
-        font-size: 15px;
-    }
-
-    .section {
-        padding: 75px 6%;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-        font-size: clamp(1.8rem, 8vw, 2.7rem);
-        line-height: 1.15;
-    }
-
-    .section-index {
-        font-size: 0.75rem;
-    }
-
-    /* CABEÇALHO */
-
-    .header {
-        height: 70px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .header-container {
-        height: 70px;
-        padding: 0 5%;
-    }
-
-    .logo {
-        gap: 9px;
-    }
-
-    .logo-symbol {
-        font-size: 1.7rem;
-    }
-
-    .logo-text {
-        font-size: 0.85rem;
-    }
-
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 1002;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        padding: 20px 6% 28px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 5px;
-
-        background: #101B32;
-        border-bottom: 1px solid #D6B978;
-
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-
-        transition: 0.3s ease;
-    }
-
-    .nav-menu.active,
-    .nav-menu.open,
-    .header.menu-open .nav-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .nav-link {
-        display: block;
-        width: 100%;
-        padding: 13px 10px;
-        font-size: 0.9rem;
-        text-align: left;
-    }
-
-    /* CAPA */
-
-    .hero {
-        min-height: 85svh;
-        min-height: 85vh;
-        padding: 80px 0 65px;
-        display: flex;
-        align-items: center;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 0 7%;
-    }
-
-    .eyebrow {
-        font-size: 0.7rem;
-        letter-spacing: 2px;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.7rem, 13vw, 5rem);
-        line-height: 0.98;
-        overflow-wrap: anywhere;
-    }
-
-    .hero-description {
-        max-width: 100%;
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
-
-    .hero-student {
-        margin-top: 30px;
-    }
-
-    .student-label {
-        font-size: 0.65rem;
-    }
-
-    .hero-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 13px 22px;
-        font-size: 0.8rem;
-    }
-
-    .hero-number {
-        font-size: 3rem;
-    }
-
-    .hero-side-text {
-        display: none;
-    }
-
-    /* FAIXA ACADÊMICA */
-
-    .academic-strip {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 22px 12px;
-        padding: 25px 6%;
-    }
-
-    .academic-item {
-        min-width: 0;
-        font-size: 0.78rem;
-    }
-
-    /* SOBRE */
-
-    .about-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .about-image {
-        width: 100%;
-        min-height: 280px;
-    }
-
-    .image-cover {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .image-caption {
-        font-size: 0.75rem;
-    }
-
-    .about-content {
-        width: 100%;
-    }
-
-    .about-content p {
-        font-size: 0.95rem;
-        line-height: 1.8;
-    }
-
-    .about-details {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* TRAJETÓRIA */
-
-    .trajectory-intro {
-        font-size: 0.95rem;
-        line-height: 1.8;
-    }
-
-    .trajectory-big-number {
-        font-size: clamp(4rem, 20vw, 7rem);
-    }
-
-    .timeline {
-        padding-left: 8px;
-    }
-
-    .timeline-item {
-        gap: 15px;
-        padding-bottom: 30px;
-    }
-
-    .timeline-marker {
-        flex-shrink: 0;
-    }
-
-    .timeline-content {
-        min-width: 0;
-    }
-
-    .timeline-period {
-        font-size: 0.75rem;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .timeline-content p {
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
-
-    /* CONTEÚDOS E GALERIA */
-
-    .chapter {
-        margin-bottom: 55px;
-    }
-
-    .chapter-header {
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    .chapter-number {
-        font-size: 2.2rem;
-    }
-
-    .chapter-header h3 {
-        font-size: 1.35rem;
-    }
-
-    .chapter-decoration {
-        display: none;
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .gallery-item {
-        width: 100%;
-        margin: 0;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        max-height: 420px;
-        object-fit: cover;
-    }
-
-    .gallery-button {
-        width: 100%;
-        text-align: left;
-    }
-
-    .gallery-zoom {
-        font-size: 0.8rem;
-    }
-
-    figcaption {
-        padding: 12px 4px;
-        font-size: 0.82rem;
-        line-height: 1.5;
-    }
-
-    .add-content-note {
-        padding: 20px;
-        font-size: 0.85rem;
-    }
-
-    /* REFLEXÕES */
-
-    .reflection-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .reflection-card {
-        padding: 25px 22px;
-    }
-
-    .reflection-number {
-        font-size: 2rem;
-    }
-
-    .reflection-card h3 {
-        font-size: 1.15rem;
-    }
-
-    .reflection-card p {
-        font-size: 0.9rem;
-        line-height: 1.75;
-    }
-
-    /* METAS */
-
-    .goals-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .goal-card {
-        padding: 25px 22px;
-    }
-
-    .goal-icon {
-        font-size: 1.8rem;
-    }
-
-    .goal-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .goal-card p {
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
-
-    /* PLANEJAMENTO */
-
-    .planning-intro {
-        font-size: 0.95rem;
-        line-height: 1.8;
-    }
-
-    .planning-steps {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .planning-step {
-        width: 100%;
-        padding: 22px;
-    }
-
-    /* FUTURO */
-
-    .future-section {
-        min-height: 450px;
-        padding: 75px 6%;
-    }
-
-    .future-content {
-        width: 100%;
-        padding: 0;
-    }
-
-    .future-overline {
-        font-size: 0.7rem;
-        letter-spacing: 2px;
-    }
-
-    .future-content h2 {
-        font-size: clamp(2.2rem, 10vw, 4rem);
-        line-height: 1.1;
-    }
-
-    .future-content p {
-        font-size: 0.95rem;
-        line-height: 1.8;
-    }
-
-    .future-footer {
-        font-size: 0.75rem;
-    }
-
-    /* CONCLUSÃO */
-
-    .conclusion-section {
-        padding: 75px 6%;
-    }
-
-    .conclusion-content {
-        width: 100%;
-    }
-
-    .conclusion-quote {
-        font-size: clamp(1.4rem, 6vw, 2.2rem);
-        line-height: 1.5;
-    }
-
-    .conclusion-signature {
-        font-size: 0.9rem;
-    }
-
-    .signature-line {
-        width: 55px;
-    }
-
-    /* RODAPÉ */
-
-    .footer {
-        padding: 40px 6% 20px;
-    }
-
-    .footer-top {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-    }
-
-    .footer-brand {
-        width: 100%;
-    }
-
-    .footer-logo {
-        font-size: 1.2rem;
-    }
-
-    .footer-back {
-        font-size: 0.85rem;
-    }
-
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        font-size: 0.72rem;
-    }
-
-    /* VOLTAR AO TOPO */
-
-    .back-to-top {
-        width: 43px;
-        height: 43px;
-        right: 15px;
-        bottom: 15px;
-    }
-
-    /* LIGHTBOX */
-
-    .lightbox {
-        padding: 15px;
-    }
-
-    .lightbox-content {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .lightbox-content img {
-        max-width: 100%;
-        max-height: 75svh;
-        object-fit: contain;
-    }
-
-    .lightbox-close {
-        top: 15px;
-        right: 15px;
-    }
-
-    .lightbox-prev {
-        left: 5px;
-    }
-
-    .lightbox-next {
-        right: 5px;
-    }
-
-    .lightbox-prev,
-    .lightbox-next {
-        width: 38px;
-        height: 38px;
-    }
-}
-
-/* CELULARES PEQUENOS */
-
-@media (max-width: 380px) {
-
-    .section {
-        padding: 60px 5%;
-    }
-
-    .hero-content {
-        padding: 0 5%;
-    }
-
-    .hero h1 {
-        font-size: 2.6rem;
-    }
-
-    .academic-strip {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading h2 {
-        font-size: 1.8rem;
-    }
-
-    .chapter-header h3 {
-        font-size: 1.2rem;
-    }
-
-    .reflection-card,
-    .goal-card,
-    .planning-step {
-        padding: 20px 17px;
-    }
-}
-
-/* ACESSIBILIDADE E MOVIMENTO */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* PREVENÇÃO DE QUEBRAS */
-
-@media (max-width: 768px) {
-    .about-grid,
-    .reflection-grid,
-    .goals-grid,
-    .planning-steps,
-    .gallery {
-        min-width: 0;
-    }
-
-    p,
-    h1,
-    h2,
-    h3,
-    span {
-        overflow-wrap: break-word;
-    }
-
-    button,
-    a {
-        -webkit-tap-highlight-color: transparent;
-    }
-}
+/* O bloco responsivo duplicado foi removido para evitar regras conflitantes. */
 
 
 /* =========================================
@@ -4229,77 +3594,673 @@ body.modal-open {
         font-size: 0.67rem;
     }
 }
-/* =========================================
-   CORREÇÕES MOBILE — PORTFÓLIO
-========================================= */
+
+
+
+/* ==========================================================
+   AJUSTES FINAIS — RESPONSIVIDADE E PREVENÇÃO DE OVERFLOW
+   ========================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, video, iframe {
+    max-width: 100%;
+}
+
+.about-grid > *,
+.trajectory-intro > *,
+.chapter-header > *,
+.reflection-grid > *,
+.goals-grid > *,
+.planning-steps > *,
+.gallery > *,
+.memory-modal-gallery > * {
+    min-width: 0;
+}
 
 @media (max-width: 700px) {
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
 
-    /* NÚMERO 01 - 09 DO INÍCIO */
+    .header-container {
+        width: 90%;
+        gap: 12px;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo-text strong,
+    .logo-text small {
+        overflow-wrap: normal;
+    }
+
+    .hero-content,
+    .section-heading,
+    .about-content,
+    .trajectory-content,
+    .future-content,
+    .conclusion-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        font-size: clamp(2.8rem, 13vw, 5.2rem);
+    }
+
+    .academic-item {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .trajectory-intro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 25px 20px;
+    }
+
+    .timeline {
+        margin-left: 8px;
+        padding-left: 32px;
+        max-width: calc(100% - 8px);
+    }
+
+    .timeline-marker {
+        left: -52px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .timeline-content,
+    .timeline-content h3,
+    .timeline-content p {
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
+
+    .chapter {
+        padding: 22px 16px;
+    }
+
+    .chapter-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .chapter-header > div:first-child {
+        min-width: 0;
+        flex: 1 1 180px;
+    }
+
+    .chapter-decoration {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .gallery-button img {
+        width: 100%;
+        height: auto;
+        max-height: 360px;
+        object-fit: cover;
+    }
+
+    .year-gallery-section {
+        padding: 65px 16px;
+    }
+
+    .year-gallery-section .section-heading {
+        padding: 0 4px;
+    }
+
+    .year-filters {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .year-filter {
+        min-height: 40px;
+        max-width: 100%;
+        padding: 9px 12px;
+        white-space: normal;
+    }
+
+    .year-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .year-month {
+        min-width: 0;
+        min-height: 108px;
+        padding: 14px 7px;
+    }
+
+    .year-month .month-name {
+        font-size: clamp(0.82rem, 4vw, 1rem);
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .memory-modal {
+        padding: 8px;
+        align-items: center;
+    }
+
+    .memory-modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 94dvh;
+        padding: 54px 15px 22px;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+    }
+
+    .memory-modal-header {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .memory-modal-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .memory-card,
+    .memory-image {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .memory-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .memory-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .lightbox-content {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .header-container {
+        width: 92%;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-symbol {
+        width: 36px;
+        height: 36px;
+        font-size: 19px;
+    }
+
+    .logo-text strong {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .logo-text small {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .year-gallery-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .year-timeline {
+        gap: 8px;
+    }
+
+    .year-month {
+        min-height: 98px;
+        padding: 12px 5px;
+    }
+
+    .year-filter {
+        font-size: 0.68rem;
+        padding: 8px 10px;
+    }
+
+    .memory-modal-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+
+
+/* ==========================================================
+   24. AJUSTES DEFINITIVOS PARA CELULARES
+   Mantém integralmente o layout de computador.
+   ========================================================== */
+
+/* Evita que elementos largos provoquem rolagem lateral. */
+@media (max-width: 700px) {
+    html {
+        width: 100%;
+        scroll-padding-top: 82px;
+        overflow-x: clip;
+    }
+
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: clip;
+    }
+
+    main,
+    section,
+    header,
+    footer {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+    }
+
+    /* CABEÇALHO */
+    .header {
+        height: 72px;
+    }
+
+    .header.scrolled {
+        height: 68px;
+    }
+
+    .header-container {
+        width: 92%;
+        gap: 10px;
+    }
+
+    .logo {
+        min-width: 0;
+        gap: 9px;
+    }
+
+    .logo-symbol {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text {
+        min-width: 0;
+    }
+
+    .logo-text strong {
+        font-size: clamp(9px, 2.8vw, 11px);
+        letter-spacing: 1.2px;
+    }
+
+    .logo-text small {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .menu-toggle {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        width: min(340px, 86vw);
+        max-width: 100%;
+        height: 100dvh;
+        padding: 100px 25px 35px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    /* INÍCIO — conteúdo em fluxo normal para o número não cobrir o botão. */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        min-height: 0;
+        height: auto;
+        max-height: none;
+        padding: 120px 7% 38px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        line-height: 1.6;
+        letter-spacing: 2.5px;
+        margin-bottom: 16px;
+    }
+
+    .gold-line {
+        margin: 18px 0 25px;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        font-size: clamp(47px, 13vw, 76px);
+        line-height: 0.98;
+        letter-spacing: -2px;
+        overflow-wrap: normal;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-top: 22px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .hero-student {
+        margin-top: 28px;
+        padding-left: 14px;
+    }
+
+    .student-label {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .hero-student h2 {
+        font-size: clamp(18px, 5vw, 22px);
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-student p {
+        font-size: 11px;
+    }
+
+    .hero-button {
+        display: inline-flex;
+        justify-content: space-between;
+        align-self: flex-start;
+        max-width: 100%;
+        margin-top: 28px;
+        padding: 14px 16px;
+        gap: 14px;
+        font-size: 9px;
+        letter-spacing: 1.3px;
+        white-space: normal;
+    }
+
     .hero-number {
         position: relative;
-        right: auto;
-        bottom: auto;
+        inset: auto;
         display: block;
         width: 100%;
         margin-top: 28px;
-        text-align: left;
+        text-align: right;
+        font-size: 11px;
+        letter-spacing: 2px;
+        line-height: 1.4;
         z-index: 2;
     }
 
-    /* SEÇÃO MINHA TRAJETÓRIA */
-    .trajectory-section {
+    .hero-side-text {
+        display: none;
+    }
+
+    .hero::before {
+        width: 300px;
+        height: 300px;
+        right: -190px;
+        top: 42%;
+    }
+
+    .hero::after {
+        width: 220px;
+        height: 220px;
+        right: -145px;
+        top: 42%;
+    }
+
+    /* IDENTIFICAÇÃO */
+    .academic-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 0;
+        padding: 27px 5%;
+    }
+
+    .academic-item {
+        min-width: 0;
+        padding: 5px 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .academic-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .academic-item:nth-child(3) {
+        padding-left: 10px;
+    }
+
+    .academic-item span {
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+    .academic-item strong {
+        font-size: 11px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* PADRÃO DAS SEÇÕES */
+    .section {
         width: 100%;
-        padding: 70px 6%;
+        padding: 68px 6%;
+    }
+
+    .section-heading {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 34px;
+    }
+
+    .section-index {
+        display: inline-block;
+        max-width: 100%;
+        font-size: 8px;
+        letter-spacing: 2px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .section-heading h2 {
+        max-width: 100%;
+        font-size: clamp(31px, 9vw, 40px);
+        line-height: 1.15;
+        overflow-wrap: break-word;
+    }
+
+    .section-heading > p {
+        max-width: 100%;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* QUEM SOU EU */
+    .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        width: 100%;
+    }
+
+    .about-image {
+        width: calc(100% - 10px);
+        min-width: 0;
+        min-height: 0;
+        height: auto;
+        margin: 5px 5px 0;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        max-height: 440px;
+        object-fit: cover;
+    }
+
+    .image-caption {
+        padding: 13px;
+        font-size: 8px;
+        letter-spacing: 1.4px;
+    }
+
+    .about-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-content h3 {
+        font-size: clamp(24px, 7vw, 30px);
+        line-height: 1.25;
+    }
+
+    .about-content > p {
+        font-size: 13px;
+        line-height: 1.85;
+        margin-bottom: 24px;
+    }
+
+    .about-details > div {
+        align-items: flex-start;
+        gap: 13px;
+        padding: 16px 0;
+    }
+
+    .about-details > div > span {
+        flex: 0 0 28px;
+        font-size: 18px;
+    }
+
+    .about-details > div > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .about-details strong {
+        font-size: 12px;
+    }
+
+    .about-details p {
+        font-size: 11px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    /* MINHA TRAJETÓRIA — grade, caixa e linha alinhadas. */
+    .trajectory-section {
         overflow: hidden;
     }
 
     .trajectory-section .section-heading {
-        width: 100%;
         text-align: left;
     }
 
     .trajectory-intro {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 16px;
         width: 100%;
-        gap: 18px;
-        padding: 24px 18px;
-        margin-bottom: 50px;
-        box-sizing: border-box;
+        min-width: 0;
+        padding: 24px 19px;
+        margin: 0 0 48px;
     }
 
     .trajectory-big-number {
-        font-size: clamp(60px, 18vw, 85px);
-        line-height: 1;
+        font-size: clamp(58px, 18vw, 82px);
+        line-height: 0.95;
+    }
+
+    .trajectory-intro > div:last-child {
+        min-width: 0;
+        width: 100%;
     }
 
     .trajectory-intro h3 {
-        font-size: 23px;
+        font-size: clamp(21px, 6vw, 26px);
+        line-height: 1.3;
         overflow-wrap: break-word;
     }
 
     .trajectory-intro p {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.8;
+        overflow-wrap: anywhere;
     }
 
-    /* LINHA DO TEMPO */
     .timeline {
+        position: relative;
         width: 100%;
         max-width: 100%;
         margin: 0;
-        padding-left: 42px;
+        padding: 0 0 0 39px;
+        border-left: 1px solid rgba(214, 185, 120, 0.4);
         box-sizing: border-box;
     }
 
     .timeline-item {
+        position: relative;
         width: 100%;
-        padding-bottom: 40px;
+        min-width: 0;
+        padding: 0 0 38px;
+    }
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
     }
 
     .timeline-marker {
-        left: -52px;
+        left: -57px;
+        top: 0;
         width: 34px;
         height: 34px;
         font-size: 12px;
@@ -4310,14 +4271,538 @@ body.modal-open {
         min-width: 0;
     }
 
+    .timeline-period {
+        display: inline-block;
+        max-width: 100%;
+        font-size: 8px;
+        letter-spacing: 1.3px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
     .timeline-content h3 {
-        font-size: 21px;
+        font-size: clamp(19px, 5.5vw, 23px);
+        line-height: 1.3;
         overflow-wrap: break-word;
     }
 
     .timeline-content p {
         font-size: 12px;
         line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    /* CONTEÚDOS / CAPÍTULOS */
+    .chapter {
+        width: 100%;
+        min-width: 0;
+        padding: 22px 16px;
+        margin-bottom: 24px;
+    }
+
+    .chapter-header {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .chapter-header > div:first-child {
+        flex: 1 1 180px;
+        min-width: 0;
+    }
+
+    .chapter-number {
+        font-size: 10px;
+    }
+
+    .chapter-header h3 {
+        font-size: clamp(20px, 6vw, 25px);
+        line-height: 1.25;
         overflow-wrap: break-word;
+    }
+
+    .chapter-header p {
+        font-size: 11px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .chapter-decoration {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .gallery-item {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .gallery-button {
+        width: 100%;
+    }
+
+    .gallery-button img {
+        width: 100%;
+        height: auto;
+        max-height: 340px;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    .gallery-zoom {
+        opacity: 1;
+        transform: none;
+    }
+
+    .gallery-item figcaption {
+        font-size: 11px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .add-content-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px 15px;
+    }
+
+    .note-symbol {
+        flex: 0 0 auto;
+        font-size: 30px;
+    }
+
+    .add-content-note strong {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .add-content-note p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    /* REFLEXÕES E METAS */
+    .reflection-grid,
+    .goals-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        width: 100%;
+    }
+
+    .reflection-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 30px 23px;
+    }
+
+    .reflection-card .gold-label {
+        margin-top: 30px;
+    }
+
+    .reflection-card h3 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .reflection-card p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .reflection-number {
+        font-size: 68px;
+    }
+
+    .goal-card {
+        min-width: 0;
+        padding: 25px 22px;
+    }
+
+    .goal-card h3 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .goal-card p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* PLANEJAMENTO */
+    .planning-intro {
+        width: 100%;
+        min-width: 0;
+        padding: 21px 18px;
+    }
+
+    .planning-intro h3 {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+
+    .planning-intro p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .planning-steps {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        width: 100%;
+    }
+
+    .planning-steps > * {
+        min-width: 0;
+    }
+
+    /* FUTURO */
+    .future-section {
+        min-height: 0;
+        padding: 75px 7% 95px;
+        overflow: hidden;
+    }
+
+    .future-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .future-content h2 {
+        font-size: clamp(38px, 12vw, 51px);
+        line-height: 1.05;
+        overflow-wrap: break-word;
+    }
+
+    .future-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .future-footer {
+        right: 7%;
+        bottom: 20px;
+        max-width: 86%;
+        font-size: 7px;
+        letter-spacing: 1px;
+        text-align: right;
+    }
+
+    /* CONCLUSÃO */
+    .conclusion-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 28px 19px;
+    }
+
+    .conclusion-quote {
+        font-size: 65px;
+        line-height: 0.9;
+    }
+
+    .conclusion-content h3 {
+        font-size: clamp(22px, 7vw, 27px);
+        line-height: 1.3;
+        overflow-wrap: break-word;
+    }
+
+    .conclusion-content > p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* RODAPÉ */
+    .footer {
+        padding: 38px 7%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+    }
+
+    .footer p,
+    .footer a {
+        overflow-wrap: anywhere;
+    }
+
+    /* GALERIA DO ANO */
+    .year-gallery-section {
+        width: 100%;
+        padding: 60px 15px;
+        overflow: hidden;
+    }
+
+    .year-gallery-section .section-heading {
+        padding: 0 3px;
+        margin-bottom: 28px;
+    }
+
+    .year-gallery-section .section-heading p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .year-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .year-filter {
+        max-width: 100%;
+        min-height: 40px;
+        padding: 9px 11px;
+        font-size: 10px;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .year-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
+
+    .year-month {
+        min-width: 0;
+        min-height: 105px;
+        padding: 13px 7px;
+    }
+
+    .year-month .month-number {
+        font-size: 10px;
+    }
+
+    .year-month .month-name {
+        font-size: clamp(12px, 3.8vw, 15px);
+        text-align: center;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .year-month .month-icon {
+        font-size: 17px;
+    }
+
+    /* MODAL DE MEMÓRIAS */
+    .memory-modal {
+        padding: 8px;
+        align-items: center;
+    }
+
+    .memory-modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 94dvh;
+        padding: 52px 14px 20px;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+    }
+
+    .memory-modal-header {
+        padding: 5px 3px 20px;
+        margin-bottom: 22px;
+    }
+
+    #memoryModalTitle {
+        font-size: 1.45rem;
+        overflow-wrap: break-word;
+    }
+
+    #memoryModalDescription {
+        font-size: 0.78rem;
+        line-height: 1.7;
+    }
+
+    .memory-modal-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .memory-card,
+    .memory-image {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .memory-card h3 {
+        font-size: 0.82rem;
+    }
+
+    .memory-card p {
+        font-size: 0.76rem;
+        line-height: 1.7;
+    }
+
+    #closeMemoryModal {
+        top: 10px;
+        right: 10px;
+    }
+
+    /* LIGHTBOX E BOTÃO VOLTAR AO TOPO */
+    .lightbox {
+        padding: 60px 12px 78px;
+        gap: 8px;
+    }
+
+    .lightbox-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .lightbox-content img {
+        max-width: 100%;
+        max-height: 65dvh;
+        object-fit: contain;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        top: auto;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+        transform: none;
+    }
+
+    .lightbox-prev {
+        left: calc(50% - 52px);
+    }
+
+    .lightbox-next {
+        right: calc(50% - 52px);
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .back-to-top {
+        right: 14px;
+        bottom: 14px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* CELULARES ESTREITOS */
+@media (max-width: 380px) {
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 12.5vw, 54px);
+    }
+
+    .hero-button {
+        gap: 10px;
+        padding: 13px 12px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .timeline {
+        padding-left: 35px;
+    }
+
+    .timeline-marker {
+        left: -52px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .year-gallery-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .year-timeline {
+        gap: 8px;
+    }
+
+    .year-month {
+        min-height: 96px;
+        padding: 11px 5px;
+    }
+
+    .year-filter {
+        padding: 8px 9px;
+        font-size: 9px;
+    }
+
+    .memory-modal-content {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+}
+
+/* TABLETS: preserva a composição desktop até a largura reduzir. */
+@media (min-width: 701px) and (max-width: 1100px) {
+    .hero {
+        min-height: 700px;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero-content {
+        max-width: 68%;
+    }
+
+    .hero h1 {
+        font-size: clamp(62px, 8vw, 90px);
+    }
+
+    .trajectory-intro {
+        grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+        gap: 32px;
+        padding: 38px;
+    }
+
+    .timeline {
+        max-width: min(800px, 100%);
+    }
+
+    .reflection-grid,
+    .goals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .year-timeline {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
